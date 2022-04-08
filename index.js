@@ -6,7 +6,7 @@ for(let i=0; i<300; i++) {
         "description": "GameItems - ${i}",
         "external_url": "https://forum.openzeppelin.com",
         "image": "https://openmoji.org/data/color/svg/1FA99.svg",
-        "name": "Gold"
+        "name": "Monster ${i}"
       }`
     fs.writeFile('data/' + filename, content, err => {
         if (err) {
