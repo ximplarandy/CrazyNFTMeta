@@ -1,0 +1,19 @@
+{
+  "name": "crazynftmeta",
+  "version": "1.0.0",
+  "description": "This is the static files for the development of an NFT project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ximplarandy/CrazyNFTMeta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ximplarandy/CrazyNFTMeta/issues"
+  },
+  "homepage": "https://github.com/ximplarandy/CrazyNFTMeta#readme"
+}
