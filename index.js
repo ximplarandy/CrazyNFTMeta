@@ -31,7 +31,7 @@ const generateData= async (i)=> {
     .png()
     .toFile("data/" + i+ '.png')
 }
-for (let i = 0; i < 300; i++) {
+for (let i = 0; i < 1000; i++) {
   generateData(i);
 }
 
