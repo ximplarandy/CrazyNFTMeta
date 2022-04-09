@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ximplarandy/CrazyNFTMeta/issues"
   },
-  "homepage": "https://github.com/ximplarandy/CrazyNFTMeta#readme"
+  "homepage": "https://github.com/ximplarandy/CrazyNFTMeta#readme",
+  "dependencies": {
+    "avatar-generator": "^2.0.4"
+  }
 }

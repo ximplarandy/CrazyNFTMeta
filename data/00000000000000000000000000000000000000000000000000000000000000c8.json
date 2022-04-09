@@ -1,6 +1,6 @@
 {
-        "description": "GameItems - 200",
+        "description": "Avatar - 200",
         "external_url": "https://forum.openzeppelin.com",
-        "image": "https://openmoji.org/data/color/svg/1FA99.svg",
-        "name": "Monster 200"
+        "image": "https://raw.githubusercontent.com/ximplarandy/CrazyNFTMeta/main/data/200.png",
+        "name": "Avatar 200"
       }
