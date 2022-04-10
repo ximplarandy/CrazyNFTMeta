@@ -9,13 +9,13 @@ const avatar = new AvatarGenerator({
 })
 const generateData= async (i)=> {
   let filename = i.toString(16).padStart(64, "0") + ".json";
-  let content = `{
+  let content = {
         "description": "Money Maker - ${i}",
         "external_url": "https://forum.openzeppelin.com",
         "image": "https://raw.githubusercontent.com/ximplarandy/CrazyNFTMeta/main/data/${i}.png",
         "name": "Money Maker ${i}"
-      }`
-  fs.writeFileSync('data/' + filename, content)
+      }
+  fs.writeFileSync('data/' + filename, JSON.stringify(content))
 
   const variant = i%2==0?'female':'male' // By default 'male' and 'female' supported
   const image = await avatar.generate("ahaha" + i+'@example.com', variant)
@@ -25,7 +25,7 @@ const generateData= async (i)=> {
     .png()
     .toFile("data/" + i+ '.png')
 }
-for (let i = 0; i < 7000; i++) {
+for (let i = 0; i < 5; i++) {
   console.log("generating:" + i);
   generateData(i);
 }
