@@ -10,10 +10,10 @@ const avatar = new AvatarGenerator({
 const generateData= async (i)=> {
   let filename = i.toString(16).padStart(64, "0") + ".json";
   let content = {
-        "description": "Money Maker - ${i}",
+        "description": "Money Maker - " + i,
         "external_url": "https://forum.openzeppelin.com",
-        "image": "https://raw.githubusercontent.com/ximplarandy/CrazyNFTMeta/main/data/${i}.png",
-        "name": "Money Maker ${i}"
+        "image": "https://raw.githubusercontent.com/ximplarandy/CrazyNFTMeta/main/data/" + i + ".png",
+        "name": "Money Maker " + i
       }
   fs.writeFileSync('data/' + filename, JSON.stringify(content))
 
