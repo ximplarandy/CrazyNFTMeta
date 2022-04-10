@@ -25,7 +25,7 @@ const generateData= async (i)=> {
     .png()
     .toFile("data/" + i+ '.png')
 }
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 50; i++) {
   console.log("generating:" + i);
   generateData(i);
 }
