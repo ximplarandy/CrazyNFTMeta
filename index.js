@@ -10,28 +10,23 @@ const avatar = new AvatarGenerator({
 const generateData= async (i)=> {
   let filename = i.toString(16).padStart(64, "0") + ".json";
   let content = `{
-        "description": "Avatar - ${i}",
+        "description": "Money Maker - ${i}",
         "external_url": "https://forum.openzeppelin.com",
         "image": "https://raw.githubusercontent.com/ximplarandy/CrazyNFTMeta/main/data/${i}.png",
-        "name": "Avatar ${i}"
+        "name": "Money Maker ${i}"
       }`
-  fs.writeFile('data/' + filename, content, err => {
-    if (err) {
-      console.error(err)
-      return
-    }
-    //file written successfully
-  })
+  fs.writeFileSync('data/' + filename, content)
 
   const variant = i%2==0?'female':'male' // By default 'male' and 'female' supported
-  const image = await avatar.generate(i+'@example.com', variant)
+  const image = await avatar.generate("ahaha" + i+'@example.com', variant)
   // Now `image` contains sharp image pipeline http://sharp.pixelplumbing.com/en/stable/api-output/
   // you can write it to file
-  image
+  await image
     .png()
     .toFile("data/" + i+ '.png')
 }
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 7000; i++) {
+  console.log("generating:" + i);
   generateData(i);
 }
 
